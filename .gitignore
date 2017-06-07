@@ -1,0 +1,16 @@
+# IDE Ignore
+.idea
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Node ignore
+node_modules
+npm-debug.*
+.sass-cache
+
+* Compiled Angular files
+/trunk/src/app/angular2/app/*.js.map
+/trunk/src/app/angular2/app/*/*.js.map
+/trunk/src/app/angular2/app/*.js
+/trunk/src/app/angular2/app/*/*.js

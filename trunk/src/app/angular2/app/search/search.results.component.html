@@ -1,0 +1,19 @@
+<table class="table" *ngIf="beers && beers.length">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Beer</th>
+            <th>Neil</th>
+            <th>Chris</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>{{searchCriteria}}</td></tr>
+        <tr *ngFor="let beer of beers" [routerLink]="['/beerDetails', beer.id]">
+            <td>{{beer.type}}</td>
+            <td>{{beer.beer}}</td>
+            <td>{{beer.neilRating}}</td>
+            <td>{{beer.chrisRating}}</td>
+        </tr>
+    </tbody>
+</table>

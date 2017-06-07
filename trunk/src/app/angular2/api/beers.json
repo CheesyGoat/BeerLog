@@ -1,0 +1,14 @@
+[
+    {
+        "type": "L",
+        "name": "No.1",
+        "nrRating": 77,
+        "ckRating": 75
+    },
+    {
+        "type": "D",
+        "name": "No.2",
+        "nrRating": 82,
+        "ckRating": 80
+    }
+]

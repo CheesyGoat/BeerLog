@@ -1,0 +1,26 @@
+<div *ngIf="beer">
+    <h2>{{beer.brewery}} - {{beer.name}}</h2>
+
+    <div>
+        <hr />
+        <div>
+            <strong>{{beer.type}}</strong> style with a strength of <strong>{{beer.percentage}}%</strong>.
+        </div>
+        <div *ngIf="beer.notes != ''">
+            <h4>What We Think</h4>
+            <div>{{beer.notes}}</div>
+        </div>
+        <hr />
+        
+        <div *ngFor="let score of beer.scores">
+            <p>
+                <strong>{{score.scorer}}</strong> rated this <strong>{{score.rating}}</strong> at <strong>{{score.location}}</strong> on <strong>{{score.date | date}}</strong>.
+            </p>
+            <p>It was rating as a <strong>{{score.taster ? 'Taster' : score.bottle ? 'Bottle' : 'Draught Ale'}}</strong></p>
+            <hr/>
+        </div>
+    </div>
+</div>
+<div *ngIf="!beer">
+    {{errorMessage}}
+</div>
