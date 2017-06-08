@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "type": "L",
+        "beer": "No.1",
+        "neilRating": 77,
+        "chrisRating": 75
+    },
+    {
+        "id": 2,
+        "type": "D",
+        "beer": "No.2",
+        "neilRating": 82,
+        "chrisRating": 80
+    }
+]

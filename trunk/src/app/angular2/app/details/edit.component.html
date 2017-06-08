@@ -1,0 +1,57 @@
+<h1>Edit</h1>
+
+<div *ngIf="beer">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Style</td>
+                <td><input type="text" [value]="beer.type" /></td>
+            </tr>
+            <tr>
+                <td>Brewery</td>
+                <td><input type="text" [value]="beer.brewery" /></td>
+            </tr>            
+            <tr>
+                <td>Beer</td>
+                <td><input type="text" [value]="beer.name" /></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><input type="text" [value]="beer.percentage" /></td>
+            </tr>
+            <tr>
+                <td>Notes</td>
+                <td><textarea>{{beer.notes}}</textarea></td>
+            </tr>
+            <ng-template ngFor let-score [ngForOf]="beer.scores">
+                <tr>
+                    <td colspan="2">{{score.scorer}}</td>
+                </tr>
+                <tr>
+                    <td>Rating</td>
+                    <td><input type="number" [value]="score.rating" /></td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td><input type="text" [value]="score.location" /></td>
+                </tr>
+                <tr>
+                    <td>Taster</td>
+                    <td><input type="checkbox" [checked]="score.bottle" /></td>
+                </tr>
+                <tr>
+                    <td>Bottle</td>
+                    <td><input type="checkbox" [checked]="score.taster" /></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td><input type="text" [value]="score.date" /></td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="!beer">
+    {{errorMessage}}
+</div>

@@ -5,10 +5,10 @@ import { DetailsService } from './details.service';
 import { IBeer } from './beer';
 
 @Component({
-    templateUrl: 'app/details/details.component.html'
+    templateUrl: 'app/details/edit.component.html'
 })
 
-export class DetailsComponent implements OnInit {
+export class EditComponent {
     beer: IBeer;
     errorMessage = "Failed to load Beer";
 

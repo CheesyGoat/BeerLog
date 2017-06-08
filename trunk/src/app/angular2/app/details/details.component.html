@@ -20,6 +20,8 @@
             <hr/>
         </div>
     </div>
+
+    <button [routerLink]="['/edit', beer.id]">Edit</button>
 </div>
 <div *ngIf="!beer">
     {{errorMessage}}

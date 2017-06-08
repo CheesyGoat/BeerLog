@@ -7,12 +7,14 @@ import { IBeer } from './beer';
 
 @Injectable()
 export class DetailsService {
-    private _url = 'http://localhost:42043/api/beer/';
+    private _url = 'api/beer.json';
+    //private _url = 'http://localhost:42043/api/beer/';
 
     constructor(private _http: Http) {}
 
     get(beerId: number): Observable<IBeer> {
-        return this._http.get(this._url + beerId)
+        //return this._http.get(this._url + beerId)
+        return this._http.get(this._url)
             .map((response: Response) => <IBeer> response.json());
     }
 }

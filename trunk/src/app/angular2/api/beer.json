@@ -1,0 +1,26 @@
+{
+    "id": 1,
+    "type": "Light",
+    "brewery": "Allgates",
+    "name": "No.1",
+    "percentage": 4.4,
+    "notes":"",
+    "scores": [
+        {
+            "scorer": "Neil",
+            "rating": 77,
+            "taster": true,
+            "bottle": false,
+            "location": "Hopinn",
+            "date": "2017-01-10"
+        },
+        {
+            "scorer": "Chris",
+            "rating": 71,
+            "taster": false,
+            "bottle": false,
+            "location": "Hopinn",
+            "date": "2017-01-10"
+        }
+    ]
+}

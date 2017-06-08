@@ -13,6 +13,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './details/details.service';
+import { EditComponent } from './details/edit.component';
 
 @NgModule({
   imports: [ 
@@ -25,6 +26,7 @@ import { DetailsService } from './details/details.service';
       { path: 'search', component: SearchComponent },
       { path: 'statistics', component: StatisticsComponent },
       { path: 'beerDetails/:id', component: DetailsComponent },
+      { path: 'edit/:id', component: EditComponent },
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: '**', redirectTo: 'search', pathMatch: 'full' }
     ])
@@ -34,7 +36,8 @@ import { DetailsService } from './details/details.service';
     SearchComponent,
     SearchResultsComponent,
     StatisticsComponent,
-    DetailsComponent
+    DetailsComponent,
+    EditComponent
   ],
   providers: [
     SearchService,
