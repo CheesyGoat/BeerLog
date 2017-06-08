@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { Ng2CompleterModule } from 'ng2-completer';
 
 import { AppComponent }  from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -22,6 +23,7 @@ import { EditComponent } from './details/edit.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    Ng2CompleterModule,
     RouterModule.forRoot([
       { path: 'search', component: SearchComponent },
       { path: 'statistics', component: StatisticsComponent },
