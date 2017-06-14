@@ -3,6 +3,10 @@
 .DS_Store
 *.sublime-project
 *.sublime-workspace
+.vs/
+**/bin/
+**/obj/
+*.csproj.user
 
 # Node ignore
 node_modules
