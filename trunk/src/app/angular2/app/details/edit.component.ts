@@ -15,6 +15,7 @@ export class EditComponent {
     brewerySearch: string;
     breweries: CompleterData;
     breweryList = [
+        { name: 'Allgates' },
         { name: 'Brewery 1' },
         { name: 'Brewery 2' }
     ];

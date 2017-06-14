@@ -9,7 +9,7 @@
             </tr>
             <tr>
                 <td>Brewery</td>
-                <td><input type="text" [value]="beer.brewery" [(ngModel)]="brewerySearch" [dataSource]="breweries" [minSearchLength]="2" /></td>
+                <td><ng2-completer [initialValue]="beer.brewery" [(ngModel)]="brewerySearch" [datasource]="breweries" [minSearchLength]="2"></ng2-completer></td>
             </tr>            
             <tr>
                 <td>Beer</td>
