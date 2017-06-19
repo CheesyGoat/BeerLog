@@ -1,0 +1,36 @@
+{
+    "userLocations": [
+        {
+            "user": "Chris",
+            "locations": [
+                {
+                    "location": "HopInn",
+                    "total": 325
+                },
+                {
+                    "location": "The Dog",
+                    "total": 425
+                }
+            ],
+            "totalCask": 2897,
+            "totalTasters": 365,
+            "totalBottled": 125
+        },
+        {
+            "user": "Neil",
+            "locations": [
+                {
+                    "location": "HopInn",
+                    "total": 298
+                },
+                {
+                    "location": "The Dog",
+                    "total": 369
+                }
+            ],
+            "totalCask": 2797,
+            "totalTasters": 387,
+            "totalBottled": 166
+        }
+    ]
+}

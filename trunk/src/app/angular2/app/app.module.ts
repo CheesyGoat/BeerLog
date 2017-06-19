@@ -7,14 +7,17 @@ import { RouterModule } from '@angular/router';
 import { Ng2CompleterModule } from 'ng2-completer';
 
 import { AppComponent }  from './app.component';
+
 import { SearchComponent } from './search/search.component';
 import { SearchResultsComponent } from './search/search.results.component';
 import { SearchService } from './search/search.service';
-import { StatisticsComponent } from './statistics/statistics.component';
 
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './details/details.service';
 import { EditComponent } from './details/edit.component';
+
+import { StatisticsComponent } from './statistics/statistics.component';
+import { StatisticsService } from './statistics/statistics.service';
 
 @NgModule({
   imports: [ 
@@ -43,7 +46,8 @@ import { EditComponent } from './details/edit.component';
   ],
   providers: [
     SearchService,
-    DetailsService
+    DetailsService,
+    StatisticsService
   ],
   bootstrap: [ AppComponent ]
 })
