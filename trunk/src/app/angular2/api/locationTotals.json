@@ -1,36 +1,30 @@
 {
-    "userLocations": [
+    "locations": [
         {
-            "user": "Chris",
-            "locations": [
+            "location": "HopInn",
+            "userTotals": [
                 {
-                    "location": "HopInn",
+                    "user": "Chris",
                     "total": 325
                 },
                 {
-                    "location": "The Dog",
-                    "total": 425
+                    "user": "Neil",
+                    "total": 298
                 }
-            ],
-            "totalCask": 2897,
-            "totalTasters": 365,
-            "totalBottled": 125
+            ]
         },
         {
-            "user": "Neil",
-            "locations": [
+            "location": "The Dog",
+            "userTotals": [
                 {
-                    "location": "HopInn",
-                    "total": 298
+                    "user": "Chris",
+                    "total": 425
                 },
                 {
-                    "location": "The Dog",
+                    "user": "Neil",
                     "total": 369
                 }
-            ],
-            "totalCask": 2797,
-            "totalTasters": 387,
-            "totalBottled": 166
+            ]
         }
     ]
 }

@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { ILocationTotals } from './LocationTotals';
+import { ILocationTotals } from './locationTotals';
 
 @Injectable()
 export class StatisticsService {

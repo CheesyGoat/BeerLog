@@ -18,6 +18,7 @@ import { EditComponent } from './details/edit.component';
 
 import { StatisticsComponent } from './statistics/statistics.component';
 import { StatisticsService } from './statistics/statistics.service';
+import { LocationStatisticsComponent } from './statistics/locationStatistics.component';
 
 @NgModule({
   imports: [ 
@@ -40,9 +41,10 @@ import { StatisticsService } from './statistics/statistics.service';
     AppComponent,
     SearchComponent,
     SearchResultsComponent,
-    StatisticsComponent,
     DetailsComponent,
-    EditComponent
+    EditComponent,
+    StatisticsComponent,
+    LocationStatisticsComponent
   ],
   providers: [
     SearchService,

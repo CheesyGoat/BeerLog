@@ -1,0 +1,26 @@
+<section>
+    <h2>Locations</h2>
+    <div *ngIf="statistics">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <ng-template ngFor let-userTotal [ngForOf]="statistics.locations[0].userTotals">
+                        <th>{{userTotal.user}}</th>
+                    </ng-template>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-template ngFor let-location [ngForOf]="statistics.locations">
+                    <tr>
+                        <td>{{location.location}}</td>
+                        <ng-template ngFor let-userTotal [ngForOf]="location.userTotals">
+                            <td>{{userTotal.total}}</td>
+                        </ng-template>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</section>
