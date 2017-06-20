@@ -1,4 +1,4 @@
-export interface ILocationTotals {
+export interface ILocationStatistics {
     Locations: ILocationTotal[];
     //UserTotals: IUserTotals[];
 }
