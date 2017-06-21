@@ -2,21 +2,16 @@
     <h2>Breweries</h2>
     <div *ngIf="statistics">
         <table class="table">
-            <thead>
-                <tr>
-                    <ng-template ngFor let-userTotal [ngForOf]="statistics.userTotals">
-                        <th>{{userTotal.user}}</th>
-                    </ng-template>
-                </tr>
-            </thead>
             <tbody>
-                <tr>
-                    <ng-template ngFor let-userTotal [ngForOf]="statistics.userTotals">
+                <ng-template ngFor let-userTotal [ngForOf]="statistics.userTotals">
+                    <tr>
+                        <th>{{userTotal.user}}</th>
                         <td>{{userTotal.total}}</td>
-                    </ng-template>
-                </tr>
+                    </tr>
+                </ng-template>
                 <tr>
-                    <td [colSpan]="statistics.userTotals.count()">{{statistics.grandTotal}}</td>
+                    <th>Grand Total</th>
+                    <td>{{statistics.grandTotal}}</td>
                 </tr>
             </tbody>
         </table>

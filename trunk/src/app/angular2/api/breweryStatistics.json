@@ -1,0 +1,13 @@
+{
+    "grandTotal": 387,
+    "userTotals": [
+        {
+            "user": "Chris",
+            "total": 328
+        },
+        {
+            "user": "Neil",
+            "total": 318
+        }
+    ]
+}

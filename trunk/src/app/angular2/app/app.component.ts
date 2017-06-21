@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'pm-app',
+    selector: 'bl-app',
     templateUrl: 'app/app.component.html'
 })
 export class AppComponent { }

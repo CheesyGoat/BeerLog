@@ -21,6 +21,8 @@ import { StatisticsService } from './statistics/statistics.service';
 import { LocationStatisticsComponent } from './statistics/locationStatistics.component';
 import { BreweryStatisticsComponent } from './statistics/breweryStatistics.component';
 
+import { YearlyComparisonComponent } from './statistics/graphs/yearlyComparison.component';
+
 @NgModule({
   imports: [ 
     BrowserModule,
@@ -34,6 +36,7 @@ import { BreweryStatisticsComponent } from './statistics/breweryStatistics.compo
       { path: 'statistics', component: StatisticsComponent },
       { path: 'beerDetails/:id', component: DetailsComponent },
       { path: 'edit/:id', component: EditComponent },
+      { path: 'yearlyComparisonGraph', component: YearlyComparisonComponent },
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: '**', redirectTo: 'search', pathMatch: 'full' }
     ])
@@ -46,7 +49,8 @@ import { BreweryStatisticsComponent } from './statistics/breweryStatistics.compo
     EditComponent,
     StatisticsComponent,
     LocationStatisticsComponent,
-    BreweryStatisticsComponent
+    BreweryStatisticsComponent,
+    YearlyComparisonComponent
   ],
   providers: [
     SearchService,
