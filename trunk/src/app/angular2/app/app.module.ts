@@ -8,9 +8,9 @@ import { Ng2CompleterModule } from 'ng2-completer';
 
 import { AppComponent }  from './app.component';
 
-import { SearchComponent } from './search/search.component';
-import { SearchResultsComponent } from './search/search.results.component';
-import { SearchService } from './search/search.service';
+import { SearchComponent } from './search.1/search.component';
+import { SearchResultsComponent } from './search.1/search.results.component';
+import { SearchService } from './search.1/search.service';
 
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './details/details.service';
