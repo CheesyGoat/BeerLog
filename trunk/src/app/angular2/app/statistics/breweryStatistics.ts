@@ -1,9 +1,6 @@
+import { IUserTotal } from "./userTotal";
+
 export interface IBreweryStatistics {
     "GrandTotal": number;
-    "UserTotals": IUserBreweries[]
-}
-
-export interface IUserBreweries {
-    "User": string;
-    "Total": number;
+    "UserTotals": IUserTotal[]
 }

@@ -1,0 +1,30 @@
+{
+    "yearlyTotals": [
+        {
+            "year": 2009,
+            "userTotals": [
+                {
+                    "user": "Chris",
+                    "total": 44
+                },
+                {
+                    "user": "Neil",
+                    "total": 45
+                }
+            ]
+        },
+        {
+            "year": 2010,
+            "userTotals": [
+                {
+                    "user": "Chris",
+                    "total": 143
+                },
+                {
+                    "user": "Neil",
+                    "total": 110
+                }
+            ]
+        }
+    ]
+}

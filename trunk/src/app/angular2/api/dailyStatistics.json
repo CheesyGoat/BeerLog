@@ -1,0 +1,30 @@
+{
+    "dailyTotals": [
+        {
+            "day": "Sunday",
+            "userTotals": [
+                {
+                    "user": "Chris",
+                    "total": 189
+                },
+                {
+                    "user": "Neil",
+                    "total": 85
+                }
+            ]
+        },
+        {
+            "year": "Monday",
+            "userTotals": [
+                {
+                    "user": "Chris",
+                    "total": 826
+                },
+                {
+                    "user": "Neil",
+                    "total": 874
+                }
+            ]
+        }
+    ]
+}

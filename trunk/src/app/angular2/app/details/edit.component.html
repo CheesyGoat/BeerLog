@@ -29,7 +29,7 @@
                 </tr>
                 <tr>
                     <td>Notes</td>
-                    <td><textarea>{{beer.notes}}</textarea></td>
+                    <td><textarea [(ngModel)]="beer.notes"></textarea></td>
                 </tr>
                 <ng-template ngFor let-score [ngForOf]="beer.scores">
                     <tr>

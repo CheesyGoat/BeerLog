@@ -1,0 +1,24 @@
+<section>
+    <h2>Days</h2>
+    <div *ngIf="statistics">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Day</th>
+                    <ng-template ngFor let-userTotal [ngForOf]="statistics.dailyTotals[0].userTotals">
+                        <th>{{userTotal.user}}</th>
+                    </ng-template>
+                </tr>
+                <ng-template ngFor let-dailyTotal [ngForOf]="statistics.dailyTotals">
+                    <tr>
+                        <td>{{dailyTotal.day}}</td>
+                        <ng-template ngFor let-userTotal [ngForOf]="dailyTotal.userTotals">
+                            <td>{{userTotal.total}}</td>
+                        </ng-template>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</section>

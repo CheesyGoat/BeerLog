@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 
 import { ILocationStatistics } from './locationStatistics';
 import { IBreweryStatistics } from './breweryStatistics';
+import { IYearlyStatistics } from './yearlyStatistics';
+import { IDailyStatistics } from './dailyStatistics';
 
 @Injectable()
 export class StatisticsService {
@@ -13,14 +15,27 @@ export class StatisticsService {
     constructor(private _http: Http) {}
 
     getLocationStatistics(): Observable<ILocationStatistics> {
-        //return this._http.get(this._url + "location")
-        return this._http.get('api/locationStatistics.json')
-            .map((response: Response) => <ILocationStatistics> response.json());
+        //this._url + 'location'
+        return this.getStatistics<ILocationStatistics>('api/locationStatistics.json');
     }
 
     getBreweryStatistics(): Observable<IBreweryStatistics> {
-        //return this._http.get(this._url + "brewery")
-        return this._http.get('api/breweryStatistics.json')
-            .map((response: Response) => <IBreweryStatistics> response.json());
+        //this._url + 'brewery'
+        return this.getStatistics<IBreweryStatistics>('api/breweryStatistics.json');
+    }
+
+    getYearlyStatistics(): Observable<IYearlyStatistics> {
+        //this._url + 'yearly'
+        return this.getStatistics<IYearlyStatistics>('api/yearlyStatistics.json');
+    }
+
+    getDailyStatistics(): Observable<IDailyStatistics> {
+        //this._url + 'daily'
+        return this.getStatistics<IDailyStatistics>('api/dailyStatistics.json');
+    }
+
+    private getStatistics<T>(url: string): Observable<T> {
+        return this._http.get(url)
+            .map((response: Response) => <T> response.json());
     }
 }

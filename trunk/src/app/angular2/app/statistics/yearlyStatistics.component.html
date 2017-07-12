@@ -1,0 +1,24 @@
+<section>
+    <h2>Years</h2>
+    <div *ngIf="statistics">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Year</th>
+                    <ng-template ngFor let-userTotal [ngForOf]="statistics.yearlyTotals[0].userTotals">
+                        <th>{{userTotal.user}}</th>
+                    </ng-template>
+                </tr>
+                <ng-template ngFor let-yearlyTotal [ngForOf]="statistics.yearlyTotals">
+                    <tr>
+                        <td>{{yearlyTotal.year}}</td>
+                        <ng-template ngFor let-userTotal [ngForOf]="yearlyTotal.userTotals">
+                            <td>{{userTotal.total}}</td>
+                        </ng-template>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</section>
