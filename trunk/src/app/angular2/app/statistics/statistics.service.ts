@@ -7,6 +7,7 @@ import { ILocationStatistics } from './locationStatistics';
 import { IBreweryStatistics } from './breweryStatistics';
 import { IYearlyStatistics } from './yearlyStatistics';
 import { IDailyStatistics } from './dailyStatistics';
+import { IAverageStatistics } from './averageStatistics';
 
 @Injectable()
 export class StatisticsService {
@@ -32,6 +33,11 @@ export class StatisticsService {
     getDailyStatistics(): Observable<IDailyStatistics> {
         //this._url + 'daily'
         return this.getStatistics<IDailyStatistics>('api/dailyStatistics.json');
+    }
+
+    getAverageStatistics(): Observable<IAverageStatistics> {
+        //this._url + 'average'
+        return this.getStatistics<IAverageStatistics>('api/averageStatistics.json');
     }
 
     private getStatistics<T>(url: string): Observable<T> {

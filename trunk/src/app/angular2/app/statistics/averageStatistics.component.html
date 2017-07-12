@@ -1,0 +1,35 @@
+<section>
+    <h2>Averages</h2>
+    <div *ngIf="statistics">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Type</th>
+                    <th>Average %</th>
+                    <ng-template ngFor let-userTotal [ngForOf]="statistics.typeTotals[0].userTotals">
+                        <th colspan="2">{{userTotal.user}}</th>
+                    </ng-template>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <ng-template ngFor let-userTotal [ngForOf]="statistics.typeTotals[0].userTotals">
+                        <td><i>Total</i></td>
+                        <td><i>Average Rating<i></td>
+                    </ng-template>
+                </tr>
+                <ng-template ngFor let-typeTotal [ngForOf]="statistics.typeTotals">
+                    <tr>
+                        <td>{{typeTotal.type}}</td>
+                        <td>{{typeTotal.averagePercentage}}%</td>
+                        <ng-template ngFor let-userTotal [ngForOf]="typeTotal.userTotals">
+                            <td>{{userTotal.total}}</td>
+                            <td>{{userTotal.averageRating}}</td>
+                        </ng-template>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</section>

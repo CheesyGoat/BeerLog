@@ -1,0 +1,36 @@
+{
+    "typeTotals": [
+        {
+            "type": "Light",
+            "averagePercentage": 4.4,
+            "userTotals": [
+                {
+                    "user": "Chris",
+                    "total": 189,
+                    "averageRating": 77
+                },
+                {
+                    "user": "Neil",
+                    "total": 85,
+                    "averageRating": 74
+                }
+            ]
+        },
+        {
+            "type": "Dark",
+            "averagePercentage": 4.8,
+            "userTotals": [
+                {
+                    "user": "Chris",
+                    "total": 102,
+                    "averageRating": 81
+                },
+                {
+                    "user": "Neil",
+                    "total": 108,
+                    "averageRating": 84
+                }
+            ]
+        }
+    ]
+}

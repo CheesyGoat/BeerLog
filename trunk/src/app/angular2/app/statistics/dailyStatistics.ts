@@ -5,6 +5,6 @@ export interface IDailyStatistics {
 }
 
 export interface IDayTotal {
-    "Day": number;
+    "Day": string;
     "UserTotals": IUserTotal[]
 }
