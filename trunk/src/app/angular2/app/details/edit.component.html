@@ -1,55 +1,67 @@
 <h1>Edit</h1>
 
 <div *ngIf="beer">
-    <table class="table">
-        <tbody>
-            <tr>
-                <td>Style</td>
-                <td><input type="text" [value]="beer.type" /></td>
-            </tr>
-            <tr>
-                <td>Brewery</td>
-                <td><ng2-completer [initialValue]="beer.brewery" [(ngModel)]="brewerySearch" [datasource]="breweries" [minSearchLength]="2"></ng2-completer></td>
-            </tr>            
-            <tr>
-                <td>Beer</td>
-                <td><input type="text" [value]="beer.name" /></td>
-            </tr>
-            <tr>
-                <td>Percentage</td>
-                <td><input type="text" [value]="beer.percentage" /></td>
-            </tr>
-            <tr>
-                <td>Notes</td>
-                <td><textarea>{{beer.notes}}</textarea></td>
-            </tr>
-            <ng-template ngFor let-score [ngForOf]="beer.scores">
+    <form (ngSubmit)="onSubmit()" #editForm="ngForm">
+        <table class="table">
+            <tbody>
                 <tr>
-                    <td colspan="2">{{score.scorer}}</td>
+                    <td>Style</td>
+                    <td>
+                        <select [(ngModel)]="beer.type">
+                            <option *ngFor="let type of beerTypes" [value]="type">{{type}}</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Rating</td>
-                    <td><input type="number" [value]="score.rating" /></td>
+                    <td>Brewery</td>
+                    <td><ng2-completer [initialValue]="beer.brewery" [(ngModel)]="brewerySearch" [datasource]="breweries" [minSearchLength]="2"></ng2-completer></td>
+                </tr>            
+                <tr>
+                    <td>Beer</td>
+                    <td><input type="text" [(ngModel)]="beer.name" /></td>
                 </tr>
                 <tr>
-                    <td>Location</td>
-                    <td><input type="text" [value]="score.location" /></td>
+                    <td>Percentage</td>
+                    <td>
+                        <input type="text" required [(ngModel)]="beer.percentage" #percentage="ngModel" />
+                        <div [hidden]="percentage.valid || percentage.pristine" class="alert alert-danger">Percentage is required</div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Taster</td>
-                    <td><input type="checkbox" [checked]="score.bottle" /></td>
+                    <td>Notes</td>
+                    <td><textarea>{{beer.notes}}</textarea></td>
                 </tr>
-                <tr>
-                    <td>Bottle</td>
-                    <td><input type="checkbox" [checked]="score.taster" /></td>
-                </tr>
-                <tr>
-                    <td>Date</td>
-                    <td><input type="text" [value]="score.date" /></td>
-                </tr>
-            </ng-template>
-        </tbody>
-    </table>
+                <ng-template ngFor let-score [ngForOf]="beer.scores">
+                    <tr>
+                        <td colspan="2">{{score.scorer}}</td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td>
+                        <td><input type="number" [(ngModel)]="score.rating" /></td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td><input type="text" [(ngModel)]="score.location" /></td>
+                    </tr>
+                    <tr>
+                        <td>Taster</td>
+                        <td><input type="checkbox" [checked]="score.bottle" /></td>
+                    </tr>
+                    <tr>
+                        <td>Bottle</td>
+                        <td><input type="checkbox" [checked]="score.taster" /></td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td><input type="text" [(ngModel)]="score.date" /></td>
+                    </tr>
+                    <tr>
+                        <button type="submit" class="btn btn-success" [disabled]="!editForm.form.valid">Save</button>
+                    </tr>
+                </ng-template>
+            </tbody>
+        </table>
+    </form>
 </div>
 
 <div *ngIf="!beer">

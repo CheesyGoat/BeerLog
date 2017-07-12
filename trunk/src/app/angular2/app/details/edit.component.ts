@@ -19,6 +19,10 @@ export class EditComponent {
         { name: 'Brewery 1' },
         { name: 'Brewery 2' }
     ];
+    beerTypes = [
+        "Light",
+        "Dark"
+    ];
 
     constructor(private _route: ActivatedRoute, private _detailsService: DetailsService, private _completerService: CompleterService) {};
 
@@ -31,5 +35,9 @@ export class EditComponent {
         }
 
         this.breweries = this._completerService.local(this.breweryList, 'name', 'name');
+    }
+
+    onSubmit() {
+        console.log(this.beer);
     }
 }
